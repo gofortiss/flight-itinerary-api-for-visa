@@ -1,8 +1,8 @@
-# Safeonward Onward Ticket API Examples
+# Flight Itinerary API for Visa Applications
 
-Node.js and curl examples for the **Safeonward onward ticket API**, a B2B API for travel agencies, visa consultants, immigration service providers, and booking platforms that need to create visa-ready flight reservation PDFs for customers.
+Node.js and curl examples for the **Safeonward flight itinerary API for visa applications**, also known as an onward ticket API, flight reservation API, dummy ticket API, or PNR generator API.
 
-The Safeonward API helps approved agencies generate onward flight reservation documents, check prepaid wallet credits, poll order status, and download signed PDF links from their own CRM or booking workflow.
+The official Safeonward B2B API helps approved agencies generate real verifiable flight PNRs and visa-ready flight reservation PDFs from their own CRM, booking portal, or agency workflow. No IATA accreditation is required.
 
 > Official website: [safeonward.com](https://safeonward.com)  
 > API landing page: [safeonward.com/onward-ticket/api](https://safeonward.com/onward-ticket/api)  
