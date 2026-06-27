@@ -11,6 +11,8 @@ The official Safeonward B2B API helps approved agencies generate real verifiable
 ## What this repository contains
 
 - A minimal Node.js client using native `fetch`
+- Plain PHP examples using cURL for server-side agency integrations
+- A Python example using the standard library
 - A test mode order example that creates a demo onward ticket PDF without consuming credits
 - A live order example for approved B2B agencies
 - Wallet balance, order status, PDF download, and cancellation examples
@@ -43,8 +45,8 @@ You can request agency access from the Safeonward website:
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_ORG/safeonward-onward-ticket-api-examples.git
-cd safeonward-onward-ticket-api-examples
+git clone https://github.com/gofortiss/flight-itinerary-api-for-visa.git
+cd flight-itinerary-api-for-visa
 ```
 
 Create your environment file:
@@ -64,9 +66,34 @@ SAFEONWARD_DEPARTURE_DATE=2026-08-15
 SAFEONWARD_CUSTOMER_EMAIL=client@example.com
 ```
 
-No dependencies are required. The examples use native Node.js APIs.
+No Node dependencies are required. The JavaScript examples use native Node.js APIs.
 
-## Check wallet balance
+## PHP examples
+
+The PHP examples are useful for Laravel, Symfony, WordPress, custom agency portals, and any backend that can run PHP cURL.
+
+```bash
+php examples/php/check-balance.php
+php examples/php/create-test-order.php
+php examples/php/create-live-order.php
+php examples/php/check-order-status.php pao_your_order_id
+php examples/php/download-pdf.php pao_your_order_id
+php examples/php/cancel-order.php pao_your_order_id
+```
+
+Full PHP guide:
+
+[docs/php-examples.md](docs/php-examples.md)
+
+## Python example
+
+```bash
+python3 examples/python/create_test_order.py
+```
+
+## Node.js examples
+
+### Check wallet balance
 
 ```bash
 npm run balance
@@ -82,7 +109,7 @@ Response:
 }
 ```
 
-## Create a test onward ticket order
+### Create a test onward ticket order
 
 Test mode is the safest way to verify your integration. It returns a demo reservation with a signed PDF URL, does not contact the airline provider, and does not consume wallet credits.
 
@@ -126,7 +153,7 @@ Example ready response:
 }
 ```
 
-## Create a live order
+### Create a live order
 
 Live orders consume one wallet credit and attempt to create a real reservation PDF.
 
@@ -136,7 +163,7 @@ npm run create:live
 
 The API may return `ready`, `pending`, or `failed`.
 
-### Ready
+#### Ready
 
 `ready` means the reservation PDF is available immediately.
 
@@ -150,7 +177,7 @@ The API may return `ready`, `pending`, or `failed`.
 }
 ```
 
-### Pending
+#### Pending
 
 `pending` means fulfillment is still running. Poll the `status_url`.
 
@@ -164,7 +191,7 @@ The API may return `ready`, `pending`, or `failed`.
 }
 ```
 
-### Failed
+#### Failed
 
 If no valid reservation PDF is produced, Safeonward refunds the credit automatically.
 
@@ -180,13 +207,13 @@ If no valid reservation PDF is produced, Safeonward refunds the credit automatic
 }
 ```
 
-## Poll order status
+### Poll order status
 
 ```bash
 npm run status -- pao_your_order_id
 ```
 
-## Download the onward ticket PDF
+### Download the onward ticket PDF
 
 ```bash
 npm run pdf -- pao_your_order_id

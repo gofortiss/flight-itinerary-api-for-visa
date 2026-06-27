@@ -16,6 +16,9 @@ This repository is written for real developers and agency operators. The keyword
 - visa application flight reservation
 - B2B travel API
 - Safeonward API
+- PHP flight itinerary API example
+- PHP onward ticket API example
+- Python flight reservation API example
 
 Recommended GitHub repository description:
 
@@ -33,5 +36,7 @@ travel-agency-api
 b2b-api
 safeonward
 nodejs
+php
+python
 curl
 ```

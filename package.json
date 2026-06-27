@@ -19,7 +19,9 @@
     "visa-travel-api",
     "travel-agency-api",
     "safeonward",
-    "b2b-api"
+    "b2b-api",
+    "php-example",
+    "python-example"
   ],
   "author": "Safeonward",
   "license": "MIT",
