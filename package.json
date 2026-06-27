@@ -1,0 +1,29 @@
+{
+  "name": "safeonward-onward-ticket-api-examples",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Node.js and curl examples for the Safeonward onward ticket API, flight reservation PDF API, and visa travel agency integrations.",
+  "type": "module",
+  "scripts": {
+    "balance": "node examples/check-balance.js",
+    "create:test": "node examples/create-test-order.js",
+    "create:live": "node examples/create-live-order.js",
+    "status": "node examples/check-order-status.js",
+    "pdf": "node examples/download-pdf.js"
+  },
+  "keywords": [
+    "onward-ticket-api",
+    "flight-reservation-api",
+    "dummy-ticket-api",
+    "pnr-generator-api",
+    "visa-travel-api",
+    "travel-agency-api",
+    "safeonward",
+    "b2b-api"
+  ],
+  "author": "Safeonward",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
